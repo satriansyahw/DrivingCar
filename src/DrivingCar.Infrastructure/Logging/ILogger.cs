@@ -8,6 +8,7 @@ namespace DrivingCar.Infrastructure.Logging
 {
     public interface ILogger
     {
-        void Info(string message);
+        void LogInfo(string message);
+        void LogError(string message, Exception exception);
     }
 }
