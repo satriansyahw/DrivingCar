@@ -1,6 +1,6 @@
 ﻿using DrivingCar.Application.DTOs;
 
-namespace DrivingCar.Application.Services
+namespace DrivingCar.Application.Interfaces
 {
     public interface IDrivingCarAppService
     {

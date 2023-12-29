@@ -1,5 +1,6 @@
 ﻿using DrivingCar.Application;
 using DrivingCar.Application.DTOs;
+using DrivingCar.Application.Interfaces;
 using DrivingCar.Application.Services;
 using DrivingCar.Domain.Services;
 using DrivingCar.Domain.Shared;

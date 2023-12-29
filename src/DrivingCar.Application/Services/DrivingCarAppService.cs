@@ -1,10 +1,9 @@
-﻿
-using DrivingCar.Application.DTOs;
-using DrivingCar.Application.Services;
+﻿using DrivingCar.Application.DTOs;
+using DrivingCar.Application.Interfaces;
 using DrivingCar.Domain.Services;
 using DrivingCar.Domain.Shared;
 
-namespace DrivingCar.Application
+namespace DrivingCar.Application.Services
 {
     public class DrivingCarAppService : IDrivingCarAppService
     {

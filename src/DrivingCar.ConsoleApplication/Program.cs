@@ -1,4 +1,4 @@
-﻿using DrivingCar.Application.Services;
+﻿using DrivingCar.Application.Interfaces;
 using DrivingCar.Infrastructure;
 using DrivingCar.Infrastructure.Logging;
 using Microsoft.Extensions.DependencyInjection;
