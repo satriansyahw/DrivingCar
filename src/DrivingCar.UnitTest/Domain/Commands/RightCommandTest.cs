@@ -13,7 +13,7 @@ namespace DrivingCar.UnitTest.Domain.Commands
         [DataRow('E', 'S')]
         [DataRow('S', 'W')]
         [DataRow('W', 'N')]
-        public void Test_Positive_Given_Direction_ReturnDirection(char direction, char expected)
+        public void Test_Positive_Given_Direction_ReturnNewDirection(char direction, char expected)
         {
             Car car = new Car();
             car.X = 1;
