@@ -1,8 +1,7 @@
-﻿
-using DrivingCar.Domain.Commands;
+﻿using DrivingCar.Domain.Commands;
 using DrivingCar.Domain.Shared;
 
-namespace DrivingCar.UnitTest.Domain
+namespace DrivingCar.UnitTest.Domain.Commands
 {
     [TestClass]
     public class ForwardCommandTest
@@ -10,9 +9,9 @@ namespace DrivingCar.UnitTest.Domain
         ICommand command = new ForwardCommand();
 
         [TestMethod]
-        [DataRow('N', 0,6,10,10,7)]     
-        [DataRow('S', 0, 7, 10, 10,6)]
-        public void Test_PositiveForDirectionNS_Given_Coordinate_Return_NewCoordinate(char direction, int posWidth,int posHeight, int fieldWidth,int fieldHeight, int expected)
+        [DataRow('N', 0, 6, 10, 10, 7)]
+        [DataRow('S', 0, 7, 10, 10, 6)]
+        public void Test_PositiveForDirectionNS_Given_Coordinate_Return_NewCoordinate(char direction, int posWidth, int posHeight, int fieldWidth, int fieldHeight, int expected)
         {
             Car car = new Car();
             car.X = posWidth;
@@ -20,11 +19,11 @@ namespace DrivingCar.UnitTest.Domain
             car.Direction = direction;
             Field field = new Field(fieldWidth, fieldHeight);
             command.Execute(car, field);
-            Assert.AreEqual(expected,car.Y) ;
+            Assert.AreEqual(expected, car.Y);
         }
         [TestMethod]
         [DataRow('N', 0, 10, 10, 10, 10)]
-        [DataRow('N', 0, 11, 10, 10, 10)] 
+        [DataRow('N', 0, 11, 10, 10, 10)]
         public void Test_PositiveForDirectionN_Given_OutOfBoundaryMoreThanOrEqualFieldHeight_Return_fieldHeight(char direction, int posWidth, int posHeight, int fieldWidth, int fieldHeight, int expected)
         {
             Car car = new Car();
@@ -89,7 +88,7 @@ namespace DrivingCar.UnitTest.Domain
         }
         [TestMethod]
         [DataRow('E', -2, 9, 10, 10, 1)]
-        [DataRow('E', 0, 9, 10, 10, 1)] 
+        [DataRow('E', 0, 9, 10, 10, 1)]
         public void Test_PositiveForDirectionE_Given_OutOfBoundaryLessThanOrEqualZero_Return_Zero(char direction, int posWidth, int posHeight, int fieldWidth, int fieldHeight, int expected)
         {
             Car car = new Car();
