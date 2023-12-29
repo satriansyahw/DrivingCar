@@ -14,7 +14,7 @@ namespace DrivingCar.Infrastructure.Logging
         }
         public void LogInfo(string message)
         {
-            Console.WriteLine(($"{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}{message}"));
+            Console.WriteLine(($"{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")} {message}"));
         }
     }
 }
